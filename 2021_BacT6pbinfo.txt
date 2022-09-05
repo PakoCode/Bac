@@ -1,0 +1,106 @@
+SII
+1.
+
+1.
+a)404 si 413
+404
+405 k=1
+406
+407 k=2
+408
+409 k=3
+410 k=4
+411 k=5
+412 k=6
+413 k=7
+
+b)x=58 k=1
+x=59 k=2;
+x=60 k=2
+x=61 k=3;
+x=62 k=3; => y=61, 62;
+
+c)
+cin>>x>>y;
+k=0, i=x;
+while(i<=y){
+     n=i;
+     c=0;
+  while(n>0 && c==0){
+    if(n%2==1) c=1;
+    n=n/10;
+  k=k+c;
+  i=i+1;
+cout<<k;
+
+d)citește x,y
+ (numere naturale, x≤y)
+k0; ix
+┌pentru i<-x, y
+│ ni; c0
+│┌cât timp n>0 și c=0 execută
+││┌dacă n%2=1 atunci c1
+││└■
+││ n[n/10]
+│└■
+│ kk+c
+│ ii+1
+└■
+scrie k
+
+2.
+
+struct figura{
+    struct coordonate{
+        double x, y;
+    }centru;
+    double diametru;
+}c;
+
+3.
+PRSL*L*VON 
+
+SIII
+1.
+int numar(int n, int c){
+    int m=0, p=1;
+    while(n!=0){
+        if(n%10!=c){
+            m=m+n%10*p;
+            n=n/10;
+            p=p*10;
+        }
+        else{
+            n=n/10;
+        }
+    }
+    return m;
+}
+
+2.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main(){
+    int n, a[21][21];
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            a[1][j]=n-j;
+            a[i][1]=n-i;
+            a[n][j]=j-1;
+            if(i+j==n+1) a[i][j]=0;
+            if(i+j<n+1) a[i][j]=a[i-1][j]-1;
+            if(i+j>n+1) a[i][j]=a[i-1][j]+1;
+        }
+    }
+     for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+           cout<<a[i][j]<<" ";
+    }
+    cout<<"\n";
+     }
+    return 0;
+}
+
+3.

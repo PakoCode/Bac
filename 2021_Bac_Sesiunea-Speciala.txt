@@ -1,0 +1,97 @@
+S1
+1.c
+2.b
+3.a
+4.c
+5.d
+
+S2
+1. 3 9 9/3 + 1
+a) * * * *
+
+
+b)1 157
+d)repeta... pana cand m == n
+
+2.f(2) = 2
+f(21) = 10\
+
+3.
+x = bac2021
+se afiseaza 2021
+2021
+b!a!c!
+
+S3
+
+1.
+
+void imog(int x,int y, int rez){
+    int nr = 0, nr2 = 0;
+    int p = 1;
+    while(x != 0){
+        int c = x % 10;
+        if(c % 2 == 1){
+            nr = x%10 + nr * p;
+            p = p * 10;
+        }
+        x = x / 10;
+    }
+    p = 1;
+      while(y != 0){
+        int c1 = y % 10;
+        if(c1 % 2 == 1){
+            nr2 = y % 10 * p + nr2;
+            p = p * 10;
+        }
+        y = y / 10;
+    }
+    if(nr == nr2) rez = 1;
+    cout << rez;
+}
+
+2.
+int main()
+{
+    int a[21][21], n, k;
+    cin >> n >> k;
+    for(int i = 1; i <= n; i++){
+        for(int j = 1; j <=n; j++){
+            cin >> a[i][j];
+        }
+    }
+      for(int i = 1; i <= k; i++){
+        int aux = a[k][i];
+        a[k][i] = a[i][k];
+        a[i][k] = aux;
+    }
+      for(int i = 1; i <= n; i++){
+        for(int j = 1; j <=n; j++){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+3.
+int main()
+{
+    int x, y, k; // declaram cele doua valori si o valoare k care reprezinta indicele valorii x
+    cin >> x >> y; // citim cele doua valori
+    cout << y <<" " << x << " "; // afisam ultimele doua numere
+    k = (y - x) / 2 - 1; // determinam indicele lui x
+    int nr = x; // declaram variabila nr care reprezinta noul numar din sir imediat dupa x,
+    // cu proprietatea ca nr < x
+    while(k > 0){ // aflam toate numerele pana cand indicele este 0
+        nr = x - 2 * k; //determinam numarul precedent lui x in functie de x si indicele lui
+        k--; // indicele scade
+        x = nr; // x preia valoarea ultimului nr
+        cout << nr << " "; // afisam ultimul numar
+    }
+
+    return 0;
+}
+
+Din punct de vederele al spatiului de memorie, algoritmul are o  eficienta O(1), iar din punct de vedere al timpului 
+de executare, algoritmul are o eficienta tot O(1);

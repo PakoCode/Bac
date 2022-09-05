@@ -1,0 +1,110 @@
+1.c
+2.b
+f(41382) = F1(2) + F2(4138) = 2 + 2 + 1 + 1 + 2
+3.b
+bein beni bien bine ebin ebni eibn einb
+4.a
+5.b
+
+S2
+1. 12, 7, 354, 9, 1630, 0;
+a) 27596
+b) 726, 532, 110 ,0
+d) repeta
+pana cand x = 0 ;
+
+2.if(e.datanasterii.zi > dataeveniment.zi && e.datanasterii.luna >= dataeveniment.luna && e.datanasterii.an >= dataeveniment.an)
+if(e.datanasterii.luna > dataeveniment.luna || e.datanasterii.an > dataeveniment.an )
+
+
+3.
+s = BDUED
+
+
+S3
+1.
+void afisare(int x, int y, int k){
+    int p = 0;
+    while(x <= y){
+        cout << x << " ";
+        p ++;
+        if(p == k){
+         cout << "*" << " ";
+         p = 0;
+        }
+        x++;
+
+    }
+    if(p != 0) cout << "*";
+}
+
+2.
+#include <iostream>
+#include <string.h>
+using namespace std;
+void afisare(int x, int y, int k){
+    int p = 0;
+    while(x <= y){
+        cout << x << " ";
+        p ++;
+        if(p == k){
+         cout << "*" << " ";
+         p = 0;
+        }
+        x++;
+
+    }
+    if(p != 0) cout << "*";
+}
+int main()
+{
+    int t[11][11], a[9] = {}, x;
+    cin >> x;
+    int p = 1;
+    while(x != 0){
+        a[p] = x % 10;
+        p ++;
+        x = x / 10;
+    }
+    for(int i = 1; i <= p - 1; i ++){
+        for(int j = 1; j <= p - 1; j ++){
+            t[i][j] = a[p - j];
+        }
+    }
+    for(int i = 1; i <= p - 1; i ++){
+        for(int j = 1; j <= p - 1; j ++){
+            cout << t[i][j] << " ";
+        }
+        cout << '\n';
+    }
+}
+
+
+3. #include <iostream>
+#include <string.h>
+using namespace std;
+void afisare(int x, int y, int k){
+    int p = 0;
+    while(x <= y){
+        cout << x << " ";
+        p ++;
+        if(p == k){
+         cout << "*" << " ";
+         p = 0;
+        }
+        x++;
+
+    }
+    if(p != 0) cout << "*";
+}
+int main()
+{
+    int x, ok = 1;
+    while(cin >> x){
+        if(x % 2 == 0){ 
+            cout << x << " "; 
+            ok = 0;
+        }
+    }
+    if(ok == 1) cout << "nu exista";
+}

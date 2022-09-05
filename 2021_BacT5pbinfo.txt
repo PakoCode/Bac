@@ -1,0 +1,128 @@
+SI
+1.d
+2.
+f(7552021,1)=f(755202,2) 1
+f(755202,2)= f(75520,3) 2
+f(75520,3)= f(7552,4)
+f(7552,4)= f(755,5)
+f(755,5) = f(75,6) 5
+f(75,6)= f(7,7)
+f(7,7) = f(0,8) 7
+raspuns:a)7521
+3.s(prime)=9
+2+2+2+3
+2+2+5
+3+3+3
+b)
+4.2 3 4 5 6 d)
+5. 1-2
+2- 5
+3- 3
+4- 3
+5-2
+6-1
+b)
+
+SII
+1. a) 17396
+b) 3 275 1054 0
+c) 
+
+cin>>x;
+y=0
+do{
+if(x>9){
+do{
+x=x/10;
+}while(x>=9);
+y=y*10+x;
+cin>>x;
+}while(x!=0);
+cout<<y;
+
+d)
+citeste x
+y->0;
+cat timp x>=0
+ daca x>9 atunci
+    cat timp x>=9
+       x=[x/10]
+ y<-y*10+x
+ citeste x
+scrie y
+
+2. struct carte{
+        unsignedint nrExemplare;
+        string autor[51];
+        string titlu[51];
+}c;
+
+3.11*nf*rm*t*c*
+
+SIII
+1.
+int identice (int n){
+    int c;
+    c=n%10;
+    n=n/10;
+    while(n!=0){
+        if(n%10!=c) return 0;
+    n=n/10;
+    }
+    return 1;
+}
+
+2.
+#include <iostream>
+using namespace std;
+int main(){
+    int n, m;
+    cin>>m>>n;
+    int a[1001][1001];
+    for(int i=1; i<=m; i++){
+        for(int j=1; j<=n; j++){
+            a[1][j]=j;
+        }
+    }
+     for(int i=1; i<=m; i++){
+        for(int j=1; j<=n; j++){
+            a[1][j]=j;
+        }
+    }
+      for(int i=2; i<=m; i++){
+        for(int j=1; j<=n; j++){
+            a[i][j]=(i*j)%10;
+        }
+    }
+      for(int i=1; i<=m; i++){
+        for(int j=1; j<=n; j++){
+           cout<<a[i][j]<<" ";
+        }
+        cout<<'\n';
+    }
+    return 0;
+}
+
+3.
+#include <iostream>
+using namespace std;
+int main(){
+    int n, a[1001], maxx;
+    cin>>n;
+    for(int i=1; i<=n; i++){
+        cin>>a[i];
+}
+    for(int i=1; i<=n; i++){
+        maxx=a[1];
+        for(int j=1; j<=i; j++){
+            if(a[j]>maxx){
+                maxx=a[j];
+            }
+        }
+        cout<<maxx<<" ";
+    }
+    return 0;
+}
+
+
+

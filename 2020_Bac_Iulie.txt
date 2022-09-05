@@ -1,0 +1,38 @@
+SI
+1.d
+2.b.
+3.c
+70 60 40 30
+70 60 50 20 
+80 50 40 30
+80 60 40 20
+80 70 30 20
+
+4.c
+5.a
+
+SII
+1. 
+a)1 1 1 0 0 
+b)10246 si 98642
+c)
+d)┌cat timp b > 0 si x > 1
+││┌dacă b%10=c atunci
+│││ x←1
+││└■
+││ b←[b/10]
+2. 
+struct calculator{
+	struct memorie{
+		int interna, externa;
+	}
+	char monitor;
+}c;
+
+3. i+j>=9
+i+j-9>
+
+
+
+
+

@@ -1,0 +1,125 @@
+SI
+1.
+x=8
+y=6
+c)
+
+2.f(38627) => 2
+c=f(3862)=2
+=>c=f(386)=3 
+=> c=f(38)=3
+=> c=f(3)=3
+=> c=f(0)=9
+c=9
+a)
+
+3.
+11211
+11212
+11221
+11222
+12112
+12121
+12122
+12211
+b)
+
+
+4.
+d)
+
+5.c)
+
+
+SII
+1.
+a)15
+
+b)k=4
+10000
+98888
+
+c)
+cin>>n>>k;
+p=1;
+while(n>0)
+  c=n%10;
+  if(k>0)
+    if(c%2=1)
+      p=p*c;
+  n=n/10;
+  k=k-1;
+cout<<p;
+
+d)
+citeste n, k
+p<-1
+repeta
+  c<-n%10
+  daca k>0 atunci
+    daca c%2=1 atunci
+      p<-p*c
+  n<-[n/10]; k<-k-1
+pana cand n==0
+scrie p
+
+2.
+struct{
+    int gramaj;
+    struct{
+        int zi, luna, an;
+    }datae;
+}c;
+
+3.
+s="sanataTEA"
+cout<<9sntTEA;
+i=0
+
+sIII
+2.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+  int m, n, a[2000][2000], mann;
+  cin>>m>>n;
+  for(int i=1; i<=m; i++){
+      for(int j=1; j<=n; j++){
+          cin>>a[i][j];
+      }
+  }
+    for(int i=1; i<=m; i++){
+        mann=a[i][1];
+      for(int j=1; j<=n; j++){
+          if(a[i][j]>mann && a[i][j]<21){
+              mann=a[i][j];
+          }
+      }
+      if(mann<21){
+          cout<<mann<<'\n';
+      }
+      else{
+          cout<<"nu exista"<<'\n';
+      }
+  }
+    return 0;
+} 
+
+3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

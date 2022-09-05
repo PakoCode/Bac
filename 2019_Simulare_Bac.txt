@@ -1,0 +1,26 @@
+1.c
+2.b
+3.a
+4.b
+5.b
+
+S2:
+a)5
+
+b)20, 21, 22
+
+d)
+citeste n, k
+p<-0;
+pentru i<-1, n executa
+x<-i
+cât timp x%k=0 execută
+││ x=[x/k]; p=p+1
+│└■
+│ i=i+1
+└■
+scrie p 
+
+2. if(d.zi<e.dev.zi && d.luna<e.dev.luna)
+3.
+

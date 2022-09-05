@@ -1,0 +1,90 @@
+S1.
+1.a
+2.c
+salcie carpen larice fag ulm
+  1  	2 	3 	4   5
+
+12345
+12354
+12435
+12453
+54231
+54312
+54321
+
+3.d
+4.a
+5.b
+
+S2
+1.
+a) n = 3
++++@+++@
+b)4, 5
+
+d) cat timp i <= n executa
+ ...
+ i ++;
+
+2. 1 si 9
+
+3. a[i][j] = j % 3
+a[i][j] = (i + j) % 3;
+
+S3
+
+1.
+void divizor(int a, int b, int k, int &nr){
+    for(int i = a; i <= b; i ++){
+        if(i % k == 0 && i % 10 == k) nr ++;
+    }
+}
+
+2.\
+#include <iostream>
+#include <string.h>
+using namespace std;
+void divizor(int a, int b, int k, int &nr){
+    for(int i = a; i <= b; i ++){
+        if(i % k == 0 && i % 10 == k) nr ++;
+    }
+}
+int main()
+{
+ char s[101], voc[] ="aeiou", *p;
+ cin.getline(s,101);
+ p = strtok(s, " ");
+ while(p != NULL){
+    int k = 0;
+    for(int i = 0; i <= 4; i ++){
+        if(strchr(p, voc[i]) != NULL){
+            k ++;
+            }
+        }
+    if(k == 1) cout << p << " ";
+    p = strtok(NULL, " ");
+    }
+ }
+
+3.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int x, v[] = {};
+    while(cin >> x){
+        while(x != 0){
+            v[x % 10] ++;
+            x = x / 10;
+        }
+    }
+    for(int i = 9; i >= 0; i --){
+        while(v[i] != 0){
+            cout << i;
+            v[i] -- ;
+        }
+    }
+
+}

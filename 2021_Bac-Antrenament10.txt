@@ -1,0 +1,102 @@
+S1
+
+1.b
+a>=2001 && a<=2002 || a>=2020 && a<=2021
+
+2.c
+afis(12345) = + afis(12) 12345 +
+afis(12) = + afis(0) 12 +
+afis(0) = ++
+
+++++12+12345+
+
+3.b
+Ana Ioana LIa Maria Miruna Simona
+1   2     3    4    5      6
+
+1234 1235 1235 1245 1246 
+
+4.d
+5.c
+
+S2
+
+1. 2 9
+y = 2
+x = 9
+ABABABAB
+
+b)
+x = 3 y = 18, 19 
+
+d)
+repeta
+..
+pana cand x < y
+
+2.
+struct elev{
+ 	int cod
+ 	double nota1, nota2
+} y[29];
+
+3.
+s = pomverde
+t = pom 
+cout << pom endl verde
+
+S3.
+1.
+#include <iostream>
+
+using namespace std;
+bool armonie (int x, int y){
+    int s = 0, s2 = 0, s3 = 0, i, j;
+    s = 1 + x;
+    s2 = 1 + y;
+    for(i = 2; i * i < x; i ++){
+        if(x % i == 0) s = s + i + x / i;
+    }
+    if(i * i == x) s = s + i;
+    for(j = 2; j * j < y; j ++){
+        if(y % j == 0) s2 = s2 + j + y / j;
+    }
+    if(j * j == y) s2 = s2 + j;
+    s3 = x + y;
+    if(s < s2){
+        if(s3 >= s && s3 <= s2) return 1;
+    }
+    if(s > s2){
+        if(s3 >= s2 && s3 <= s) return 1;
+    }
+    return 0;
+}
+int main()
+{
+   int x, y;
+   cin >> x >> y;
+   cout << armonie(x, y);
+}
+
+2.
+#include <iostream>
+
+using namespace std;
+int main()
+{
+   int a[21][21], m, n;
+   cin >> m >> n;
+   for(int i = 1; i <= m; i ++){
+    for(int j = 1; j <= n; j ++){
+        cin >> a[i][j];
+    }
+   }
+   for(int i = 1; i < n; i ++){
+    for(int j = 2; j <= m; j ++){
+        if(a[1][i] == a[j][n]) cout << a[1][i] << " ";
+    }
+   }
+}
+
+
+
