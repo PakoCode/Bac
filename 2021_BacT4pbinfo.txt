@@ -108,6 +108,63 @@ int main() {
 } 
 
 3.
+#include <fstream>
+#include <iostream>
+using namespace std;
+ifstream f("bac1.txt");
+ifstream s("bac2.txt");
+int main()
+{
+    int n1, n2, x, y, ok = 0, i = 0, j = 0;
+    f >> n1, s >> n2;
+    f >> x, s >> y;
+    i ++, j ++;
+    while(i <= n1 && j <= n2){
+        if(x == y){
+            f >> x;
+            s >> y;
+            i ++;
+            j ++;
+        }
+        while(x < y && i <= n1){
+            if(x % 5 == 0){
+                    cout << x << " ";
+                    ok ++;
+                }
+            f >> x;
+            i ++;
+        }
+        while(y < x && j <= n2){
+            if(y % 5 == 0){
+                    cout << y << " ";
+                    ok ++;
+                }
+            s >> y;
+            j ++;
+            }
+        }
+  while(i <= n1){
+            if(x % 5 == 0){
+                    cout << x << " ";
+                    ok ++;
+                }
+            f >> x;
+            i ++;
+
+        }
+        while(j <= n2){
+            if(y % 5 == 0){
+                    cout << y << " ";
+                    ok ++;
+                }
+            s >> y;
+            j ++;
+
+        }
+        if(ok == 0) cout << "Nu exista";
+
+    return 0;
+    }
 
 
 
