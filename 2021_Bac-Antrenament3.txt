@@ -28,6 +28,84 @@ MAVA MCA MCFR MNHCV MNLR MNT
 5.b
 
 S2.
+1.
 a)8820
 b)642 862
 d) repeta... pana cand cn == 0
+
+2. 
+struct muzeu{
+	int numar;
+	struct{
+		char nume, colectie;
+	}exponat[];
+}m;
+
+3.s = muzeu
+s = nuzeu
+un
+zeu
+
+
+S3
+1. prea simplu
+2.
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int a[21][21], m, n;
+    cin >> m >> n;
+    for(int i = 1; i <= m; i ++){
+        for(int j = 1; j <= n; j ++){
+            cin >> a[i][j];
+        }
+    }
+    for(int i = 1; i <= m; i ++){
+        if(a[i][1] != 0){
+            for(int j = 1; j <= m; j ++){
+                if(a[i][1] == a[j][n]){
+                    cout << a[i][1] << " ";
+                }
+            }
+        }
+
+    }
+}
+
+5 4
+3 7 0 0
+0 0 5 8
+6 2 0 1
+0 3 0 6
+8 0 6 4
+
+
+3.
+#include <iostream>
+
+using namespace std;
+struct {
+    int apar, poz;
+}v[10];
+int main()
+{
+    int x, mmax = 0, c, i = 0;
+    while(cin >> x){
+        i ++;
+        c =(x / 10) % 10;
+        v[c].apar ++;
+        v[c].poz = i;
+        if(v[c].apar > mmax) mmax = v[c].apar;
+    }
+    for(int j = 1; j <= 9; j ++){
+        if(v[j].apar == mmax) cout << v[j].poz << " ";
+    }
+}
+
+
+
+
+
