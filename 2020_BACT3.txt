@@ -1,0 +1,59 @@
+1.d
+2.b
+f(3) -> 32100100
+f(2) ->2100
+f(1) -> 1 0 
+f(0) -> 0
+
+3.c
+rubin opal safir smarald topaz
+1	2     3    4      5
+
+1212 1214 1221 1222 1223 1224 1224 1225 1232
+
+5454
+
+4.a
+5.b
+
+S2
+s = 1 yes
+n = 275457
+ 1 275
+
+b)
+5678
+s = -1 
+987
+
+d) cat timp (c1-c2 * s) > 0
+
+2.
+struct cerc{
+	struct coordonate{
+		double x, y
+	}centru;
+	double raza;
+}fig;
+
+3.??
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main()
+{
+    char s[100];
+    cin.getline(s,100);
+    int p;
+    for(p = 0; p < strlen(s); p ++){
+        if(s[p] == 'A'){
+            if(s[p-1] == 'I' || s[p+1] == 'I'){
+                cout << s << endl;
+                strcpy(s + p, s + p + 1);
+            }
+        }
+    }
+    cout << s;
+    return 0;
+}
