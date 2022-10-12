@@ -17,17 +17,23 @@ int main(){
 }
 
 2.
-  #include <iostream>
+#include <iostream>
 #include <string.h>
 using namespace std;
 int main(){
     char s[101], *p;
+    char c[] = {"0123456789"};
     int k = 0;
     cin.getline(s,101);
     p = strtok(s, " ");
     while(p != NULL){
-        char c = p[0];
-        if(c >= '0' && c <= '9') k ++;
+        int ok = 1;
+        if(strchr(c, p[0])){
+            for(int i = 0; i < strlen(p); i ++){
+                if(p[i] == ',') ok = 0;
+            }
+            if(ok == 1) k ++;
+        }
         p = strtok(NULL, " ");
     }
     cout << k;
