@@ -1,0 +1,105 @@
+s1
+1.d;
+x >= 2001 && x <=2002 || x >=2019 && s <=2020
+
+2.a;
+f(12345) = +  + + ++ 1 + 123 +12345 +
+f(123) = + + ++ 1 + 123 +
+f(1) = + ++ 1 +
+f(0) = ++
+
+3.b
+albizia jacaranda laburnum magnolie mimoza sakura
+1	2	  3   	   4        5      6
+
+1234
+1235
+1236
+1245
+1246
+
+4.c;
+
+5.c;
+
+s2     
+
+1.
+a. 7533
+b. 20 si 88
+n = 253387
+cn = 253387
+c = 7
+
+d. repeta
+pana cand x >= 10
+
+2.
+struct biblio{
+	int numar;
+	struct{
+		char titlu[21], autor[21];
+		}carti[97]
+}c
+ 
+3. ou rosu
+s = stilou
+cout << ou
+rosu
+
+S3.
+
+1.#include <iostream>
+
+using namespace std;
+bool prim(int x){
+    if(x == 2) return true;
+    if(x % 2 == 0) return false;
+    if(x <= 1) return false;
+    for(int d = 2; d * d <= x; d ++){
+        if(x % d == 0) return true;
+    }
+    return false;
+}
+int putere(int n, int p){
+    int putere = 0;
+    int ok = -1;
+    int d = 2;
+    if(prim(p) == 0) return ok;
+    else{
+        while(n >= 1){
+            while(n % d == 0 && n >= 1){
+                n = n / d;
+                if(d == p) putere ++;
+            }
+            d ++;
+        }
+    }
+    return putere;
+}
+int main() {
+    int n, p;
+    cin >> n >> p;
+    cout << putere(n, p);
+    return 0;
+}
+
+
+2.
+
+
+3.
+#include <iostream>
+
+using namespace std;
+int main() {
+    int s = 0, x, smin = 1000000000;
+    while(cin >> x){
+        s = s + x;
+        if(s > 0) cin >> x, s = 0 + x;
+        if(s < smin) smin = s;
+    }
+    cout << s;
+    return 0;
+}
+s
