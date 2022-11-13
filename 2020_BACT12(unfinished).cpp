@@ -34,4 +34,56 @@ d)
 
 S3
 1.
+int powdoi(int i){
+    int p = 1;
+    while(i != 0){
+        p = p * 2;
+        i = i - 1;
+    }
+    return p;
+}
+int pDoi(int n){
+    int i = 1;
+    while(powdoi(i) < n){
+        i ++;
+    }
+    return powdoi(i - 1);
+}
+
+2.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+    int p = -1;
+    char s[100];
+    cin.getline(s,100);
+    for(int i = 0; i < strlen(s); i ++){
+        if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u'){
+            p = i;
+        }
+    }
+    strcpy(s + p, s + p + 1);
+    cout << s;
+    return 0;
+}
+
+3.
+  #include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+    int x;
+    cin >> x;
+    while(x > 1){
+        cout << x << " ";
+        if(x > 10){
+            if(x % 2 == 0) x = x / 2;
+            else x = x - 1;
+        }
+        else x = x - 1;
+    }
+    cout << x;
+    return 0;
+}
   
