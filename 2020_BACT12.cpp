@@ -86,7 +86,7 @@ int main() {
     cout << x;
     return 0;
 }
-  //Programul este eficient dpdv al timpului de executie deoarece are o complexitate O(x), unde x reprezinta numarul de termeni construiti ai sirului
+  //Programul este eficient dpdv al timpului de executie deoarece are o complexitate O(log2(x)), unde x reprezinta numarul de termeni construiti ai sirului
  //Programul este deasemenea eficient si dpdv al spatiului, folosind doar o singura variabila simpla.
 //Pornim de la x-ul citit si il afisam, dupa care vom verifica ce numar este acesta. Daca este mai mare decat 10, vom verifica daca este par => numarul precedent este
 // x-ul curent / 2. Daca este impar, numarul precedent este x-1;. Daca numarul nu este mai mare decat 10, atunci numarul precedent este tot x - 1.
