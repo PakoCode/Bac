@@ -69,8 +69,36 @@ int main() {
     return 0;
 };
 
-3.
-    
+3. //idk for sure how to do this because it mentions outputing the array in an ascending order
+    #include <iostream>
+
+using namespace std;
+
+int main() {
+    int x, a[3] = {}, k = 0;
+    while(cin >> x){
+        if(x % 100 == 20 && k <= 2){
+            for(int i = 0; i < k; i ++){
+                if(a[i] > x){
+                    a[i + 1] = a[i];
+                    
+                }
+            }
+        }
+        else if (k > 2 && x % 100 == 20){
+            for(int i = 0; i < 3; i ++){
+                if(a[i] > x){
+                    a[i] = x;
+                    break;
+                }
+            }
+        }
+    }
+    for(int i = 0; i < 3; i ++){
+        cout << a[i] << " ";
+    }
+    return 0;
+}
        
       
    
