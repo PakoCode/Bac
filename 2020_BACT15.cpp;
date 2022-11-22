@@ -1,0 +1,25 @@
+S3.
+1.simplu
+2.
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+    char s[101], *p, aux[101], voc[] = "aeiou";
+    int k = 0;
+    cin.getline(s,101);
+    p = strtok(s, " ");
+    while(p != NULL){
+        int cntV = 0;
+        strcpy(aux, p);
+        for(int i = 0; i < strlen(aux); i++){
+            if(s[i] == 'a' || s[i] == 'e' || s[i] == 'i' || s[i] == 'o' || s[i] == 'u') cntV++;
+        }
+            if(cntV == strlen(aux) - cntV) k++;
+            p = strtok(NULL, " ");
+    }
+    cout << k;
+    return 0;
+}
+
+3.
