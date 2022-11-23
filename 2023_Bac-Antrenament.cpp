@@ -18,6 +18,14 @@ d)
   x <- p;
   cat timp x < q executa
   blah blah
-  x ++;
+  x <- x + 1;
 }
 scrie s
+
+2.
+
+3.
+s1 = plantau fistic
+p = 8 - 
+  
+  
