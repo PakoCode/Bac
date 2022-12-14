@@ -61,6 +61,7 @@ int main() {
             }
         }
     }
+  if(ok == 0) cout << "Nu exista";
     return 0;
 };
 
