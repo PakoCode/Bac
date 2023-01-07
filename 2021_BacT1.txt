@@ -92,3 +92,11 @@ int main() {
     }
     return 0;
 }
+//Din punct de vedere al memoriei, algoritmul are o eficienta O(100)?
+Parcurgem sirul, iar daca gasim un numar care se afla intre 0 si 100 marim valoarea din f[numar]. 
+Dupa, parcurgem sirul in ordine descrescatoare, iar daca gasim un numar care indeplineste conditiile necesare
+il vom memora in sirul a pe pozitia k. Daca gasim doua astfel de numere, vom iesi din for().
+La final, verificam daca nu am gasit doua astfel de numere, caz in care afisam mesajul "nu exista". Altfel, vom afisa cele
+doua numere;
+
+Din punct de vedere al timpului, algoritmul este eficient, avand o eficienta O(x) - x fiind numarul de elemente din sir.
