@@ -79,3 +79,51 @@ int main() {
 }
 
 2.
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a[20][20], n, k;
+    cin >> n >> k;
+    for(int i = 1; i <= n; i ++){
+        for(int j = 1; j <= n; j ++){
+            cin >> a[i][j];
+        }
+    }
+    for(int i = 1; i < k; i ++){
+        int aux = a[k][i];
+        a[k][i] = a[i][k];
+        a[i][k] = aux;
+    }
+     for(int i = 1; i <= n; i ++){
+        for(int j = 1; j <= n; j ++){
+            cout << a[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+3.
+#include <iostream>
+
+using namespace std;
+int main() {
+    int x, y, n;
+    cin >> x >> y;
+    cout << y << " " << x << " "; //afisam primele doua numere
+    n = (y - x) / 2 ; // aflam numarul de elemente - 1
+    n --; /scadem unu ca sa avem pozitia ultimului element afisat x
+    while(n != 0){
+        x = x - 2 * n; //aflam urmatorul element
+        cout << x << " "; //afisam elementul respectiv
+        n --; // scadem din pozitie unu;
+        
+    }
+    return 0;
+}
+Vom afisa primele doua elemente pe care le primim din enuntul problemei, y si x. Dupa, aflam pozitia pe care se afla elementul y, pe care o salvam
+in variabila n. Vom scadea 1 din n ca sa fie pozitia elementului curent x, iar dupa aflam urmatorul element x in functie de n;
+
+Din punct de vedere al memoriei, algoritmul are o eficienta O(1), folosind 3 variabile simple.
+Din punct de vedere al timpului de executare, programul are o eficienta O(n), n reprezentand numarul de elemente 
