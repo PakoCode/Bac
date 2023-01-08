@@ -1,1 +1,136 @@
-S1.
+S1. 20p
+1.a
+2.d
+f(1) = 1
+f(2) = f(0) 1 =01
+f(3) = f(1) 1 = 
+f(4) = f(2) f(1) f(0) 1 = 01101
+
+3.c
+Bono, Bruce, Jovi, Cohen, Portugal
+1     2       3     4       5
+
+{1,3,5}
+
+1212 1214 1221 1222 1223
+5454
+
+4.b
+5.b
+
+S2
+1.
+a) -1 21
+n = 2186310
+b)  16789 15789
+d)repeta ... pana cand (c1-c2) * s <= 0 || n <= 9
+
+2.
+struct polinom{
+  int grad;
+  float coeficient[101];
+  }p;
+  
+3.
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+    char s[21], ok[10] = {}, voc[10] = {'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
+    cin.getline(s,21);
+    for(int i = 0; i < strlen(s); i ++){
+        for(int j = 0; j <= 9; j ++){
+            if(s[i] == voc[j]) ok[j] = 1;
+        }
+    }
+    for(int j = 0; j <= 9; j ++){
+        if(ok[j] == 0) cout << voc[j];
+    }
+    return 0;
+}
+
+32p
+S3.
+
+1.
+#include <iostream>
+using namespace std;
+int factori(int n, int m){
+    int d = 2, p1, p2, k = 0;
+    while(n > 1 && m > 1){ //mai faci la final o data while
+        p1 = 0;
+        p2 = 0;
+        while(n % d == 0 && n > 1){
+            n = n / d;
+            p1 ++;
+        }
+        while(m % d == 0 && m > 1){
+            m = m / d;
+            p2 ++;
+        }
+        if(p1 == p2 && p1 != 0) k ++;
+        d ++;
+    }
+    return k;
+}
+int main() {
+    int n, m;
+    cin >> n >> m;
+    cout << factori(n, m);
+    return 0;
+}
+
+2.
+#include <iostream>
+using namespace std;
+int main() {
+   int a[21][21], n;
+   cin >> n;
+   for(int j = 1;  j <= n; j ++){
+       a[1][j] = j;
+   }
+   for(int i = 2; i <= n; i ++){
+       for(int j = 1; j <= n - i + 1; j ++){
+           a[i][j] = a[i - 1][j] + 1;
+       }
+   }
+     for(int i = 2; i <= n; i ++){
+       for(int j = n - i + 2; j <= n; j ++){
+           a[i][j] = a[i - 1][j] - 1;
+       }
+   }
+    for(int i = 1; i <= n; i ++){
+       for(int j = 1; j <= n; j ++){
+           cout << a[i][j] << " ";
+       }
+       cout << endl;
+   }
+    return 0;
+}
+20p
+3.
+#include <iostream>
+using namespace std;
+int main() {
+    int x, lung = 0, lungm = -1, ok = 0;
+    while(cin >> x){
+        lung ++;
+        if(x >= 0 && ok == 0){
+            if(lung > lungm) lungm = lung;
+            lung = 1;
+            ok = 1;
+        }
+   }
+   if(lung > lungm) lungm = lung;
+   cout << lungm;
+    return 0;
+}
+
+Parcurgem sirul, incrementand la fiecare element variabila lung. Cand elementul citit este positiv, vom reseta lung si o vom depozita in variabila lungm. Continuam citirea pana la sfarsitul sirului, incrementand din nou la fiecare element variabila lung.
+La final, comparam lungimea sirului din stanga numarului pozitiv cu cel din drepta si vom afisa
+lungimea mai mare.
+
+D.p.d.v al memoriei, programul are o eficienta O(1), fiind folosite doar 4 variabile simple
+D.p.d.v al timpului de executare, eficienta este O(x), unde x reprezinta numarul de elemente din sir
+
