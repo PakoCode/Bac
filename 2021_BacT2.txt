@@ -134,3 +134,8 @@ lungimea mai mare.
 D.p.d.v al memoriei, programul are o eficienta O(1), fiind folosite doar 4 variabile simple
 D.p.d.v al timpului de executare, eficienta este O(x), unde x reprezinta numarul de elemente din sir
 
+aprox 30p
+
+
+=> Nota : 92p (9,2) / 100p
+
