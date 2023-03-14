@@ -1,0 +1,47 @@
+S3
+1.
+int MaxImp(int a, int b){
+    int nr = 0, ok = 0;
+    for(int i = a; i <= b; i ++){
+        int p = 1;
+        for(int d = 1; d <= i; d ++){
+            if(i % d == 0 && d % 2 != 0){
+                p = p * d;
+            }
+            if(p > i){
+                nr = i;
+                ok = 1;
+            }
+        }
+    }
+    if(ok == 0) return 0;
+    return nr;
+}
+
+2.
+#include <iostream>
+using namespace std;
+int main() {
+   int a[100][100], n, m = 0, ok = 1;
+   cin >> n;
+   for(int i = 1; i <= n; i ++){
+       for(int j = 1; j <= n; j ++){
+           cin >> a[i][j];
+       }
+   }
+   int nr = a[1][1];
+   while(ok == 1){
+       m ++;
+       for(int i = 1; i <= m; i ++){
+           for(int j = 1; j <= m; j ++){
+               if(a[i][j] != nr) ok = 0;
+           }
+       }
+       if(ok == 0) m--;
+   }
+   cout << m;
+    return 0;
+}
+
+
+3.
