@@ -1,3 +1,19 @@
+S1
+1.b
+2.c
+3.a
+4.d
+5.b
+
+S2
+1.a) 7221
+b)11 101 1001
+
+2.if(strlen(b) < 3) strcpy(a, "nedeterminat")
+else strcpy(a, b + (strlen(b) - 3))
+
+3.if(p.x == c.centru.x && p.y == c.centru.y);
+
 S3
 1.
 int MaxImp(int a, int b){
@@ -45,3 +61,28 @@ int main() {
 
 
 3.
+#include <iostream>
+
+using namespace std;
+int main() {
+    int v1[1001] = {}, v2[1001] = {}, x;
+    while(cin >> x){
+        if(x % 2 != 0){
+            v1[x] ++;
+        }
+        else v2[x] ++;
+    }
+    for(int i = 0; i <= 1000; i ++){
+        while(v1[i] != 0){
+            cout << i << " ";
+            v1[i] --;
+        }
+    }
+     for(int i = 0; i <= 1000; i ++){
+        while(v2[i] != 0){
+            cout << i << " ";
+            v2[i] --;
+        }
+    }
+    return 0;
+}
