@@ -14,3 +14,118 @@ f(-1) = -1
 5.b)
 
 S2
+1.
+a.1535
+x = 1939
+b.2399
+
+2.1357 2345
+vanilie ciocolata fistic menta tiramisu pepene cafea
+1       2         3       4     5         6     7
+1 == 6
+2 == 7
+
+1234 1235 1245 1345 1347 
+
+3.?
+
+
+S3.
+1.#include <iostream>
+#include <string.h>
+using namespace std;
+int prim(int n){
+    if(n == 2) return 1;
+    if(n % 2 == 0) return 0;
+    if(n < 2) return 0;
+    int d = 2;
+    for(d = 2; d * d <= n; d ++){
+        if(n % d == 0) return 0;
+    }
+    return 1;
+}
+int inserare(int n){
+    int nr = 0, p = 1, ok = 0;
+    while(n != 0){
+        int c1, c2;
+        c1 = n % 10;
+        c2 = (n / 10) % 10;
+        nr = nr + p * c1;
+        p = p * 10;
+        if(prim(c1) == 1 && prim(c2) == 1){
+            ok  = 1;
+            int mmax = 0;
+            if(c1 > c2) mmax = c1;
+            else mmax = c2;
+            nr = nr + p * mmax;
+            p  = p * 10;
+        }
+        n = n / 10;
+    }
+    if(ok == 0) n = 0;
+    else n = nr;
+    return n;
+}
+int main() {
+    int n;
+    cin >> n;
+    cout << inserare(n);
+    return 0;
+}
+
+
+
+2.
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+    int a[101][101], n, k;
+    cin >> n >> k;
+    for(int i = 1; i <= n; i ++){
+        for(int j = 1; j <= n; j ++){
+            cin >> a[i][j];
+        }
+    }
+    int ok = 0;
+    for(int i = k; i <= n - k + 1; i ++){
+        if(a[i][k] != a[k][i]) ok = 1; break;
+        if(a[n - k + 1][i] != a[i][n - k + 1]) ok = 1; break;
+    }
+    if(ok == 1) cout << "Incorect";
+    else cout << "Corect";
+    
+    return 0;
+}
+
+
+
+3.
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+    int frecv[101][2] = {}, x, mmax = 0;
+    while(cin >> x){
+        int c = x;
+        if(c > 100){
+            int k = 0;
+            while(c > 100) {
+                c = c / 10;
+                k ++;
+        }
+            frecv[c][0] ++;
+            if(k == 1) frecv[c][1] = 1;
+            if(frecv[c][0]  > mmax) mmax = frecv[c][0];
+       
+        }
+        
+    }
+    cout << frecv[22][0] << " ";
+    for(int i = 10; i <= 99; i ++){
+        if(frecv[i][0] == mmax && frecv[i][1] == 1) cout << i << " ";
+    }
+    return 0;
+}
