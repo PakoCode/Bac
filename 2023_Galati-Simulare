@@ -107,7 +107,7 @@ int main() {
 using namespace std;
 
 int main() {
-    int frecv[101][2] = {}, x, mmax = 0;
+    int frecv[101][2] = {}, x, mmax = -1;
     while(cin >> x){
         int c = x;
         if(c > 100){
@@ -123,9 +123,11 @@ int main() {
         }
         
     }
-    cout << frecv[22][0] << " ";
-    for(int i = 10; i <= 99; i ++){
-        if(frecv[i][0] == mmax && frecv[i][1] == 1) cout << i << " ";
+    if(mmax == -1) cout << "nu exista";
+    else{
+        for(int i = 10; i <= 99; i ++){
+            if(frecv[i][0] == mmax && frecv[i][1] == 1) cout << i << " ";
+        }
     }
     return 0;
 }
