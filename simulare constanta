@@ -6,3 +6,46 @@ S1
 5.a;
 
 S2.
+1.
+a)1203
+b)123
+executa pana cand
+
+2. FORMA A F M O R
+AFM, AFMO, AFMOR, AFMR
+AMOR FMO FMOR FOR
+
+3.
+if(j % 3 == 0 && a[i][j] < 0) cout << a[i][j] << " ";
+
+S3
+1.
+#include <iostream>
+
+using namespace std;
+int dublu(int n){
+    int nr = n, count = 0;
+    while(nr != 0){
+        count ++;
+        nr = nr / 10;
+    }
+    nr = n;
+    int k = count / 2;
+    int cif;
+    if(count % 2 == 0) return -1;
+    while(nr != 0){
+        if(count == k) cif = n % 10;
+        count ++;
+        nr = nr / 10;
+    }
+    n = (n / (pow(10, k)) * 10 + cif) * pow(10,k) + n % (pow(10,k));
+}
+int main() {
+    int n;
+    cin >> n;
+    
+    return 0;
+}
+
+
+2.
