@@ -57,4 +57,37 @@ int main() {
 
 
 2.
+#include <iostream>
+#include <cmath>
+#include <string.h>
+using namespace std;
+int main() {
+    char s[100], a[4] = {'C', 'L', 'N', 'T'},  *p, aux[100] ={};
+    cin.getline(s,50);
+    p = strtok(s, " ");
+    while(p != NULL){
+        cout << p[strlen(p) - 1] << " ";
+        if(p[strlen(p) - 1] == '.'){
+            if(p[0] == a[0]){
+                strcpy(p, "COLEGIUL");
+            }
+             if(p[0] == a[1]){
+                strcpy(p, "LICEUL");
+            }
+             if(p[0] == a[2]){
+                strcpy(p, "NATIONAL");
+            }
+             if(p[0] == a[3]){
+                strcpy(p, "TEORETIC");
+            }
+        }
+        //cout << p << " ";
+        strcat(aux, p);
+        strcat(aux, " ");
+        p = strtok(NULL, " ");
+    }
+    strcat(s, aux);
+    //cout << s;
+    return 0;
+}
 
