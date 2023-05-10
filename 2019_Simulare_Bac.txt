@@ -24,3 +24,37 @@ scrie p
 2. if(d.zi<e.dev.zi && d.luna<e.dev.luna)
 3.
 
+
+
+S3
+1.
+#include <iostream>
+#include <cmath>
+using namespace std;
+void inserare(int &n){
+    int c1, c2, nr = 0, p = 1;
+    while(n / 10 != 0){
+        c1 = n % 10;
+        nr = nr + c1 * p;
+        p = p * 10;
+        n = n / 10;
+        c2 = n % 10;
+        int dif = abs(c1 - c2);
+        nr = nr + dif * p;
+        p = p * 10;
+        
+    }
+    nr = nr + n % 10 * p;
+    n = nr;
+    cout << n;
+}
+int main() {
+    int n;
+    cin >> n;
+    inserare(n);
+    return 0;
+}
+
+
+2.
+
