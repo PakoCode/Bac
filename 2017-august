@@ -6,3 +6,53 @@ s1
 
 a) 15
 b) 3 1 
+
+S2
+1.a
+2.b.
+3.
+2,3,4
+ 
+2 4
+3 4 
+4 2 
+4 3 
+
+4.
+
+
+5.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double a[51][51], b[51][51] = {};
+    int n;
+    cin >> n;
+    for(int i = 1;  i <= n; i ++){
+        for(int j = 1; j <= n; j ++){
+            cin >> a[i][j];
+        }
+    }
+      for(int i = n + 1;  i >= 1; i --){
+        for(int j = 1; j <= n ; j ++){
+            b[i][j] = a[i][j];
+            if(i > n / 2 ) b[i][j] = a[i - 1][j];
+        }
+    }
+      for(int i = 1;  i <= n; i ++){
+          double ma = 0;
+        for(int j = 1; j <= n ; j ++){
+            ma = a[j][i] + ma;
+        }
+        b[n/2 + 1 ][i] = ma / n; 
+    }
+    for(int i = 1;  i <= n + 1 ; i ++){
+        for(int j = 1; j <= n; j ++){
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
