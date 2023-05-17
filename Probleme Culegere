@@ -84,4 +84,35 @@
 7.a;
 8.d;
 9.a;
-10.a;
+10.a;\
+
+
+//progresie;
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int x, f[1001] = {};
+    int min1 = 1001, min2 = 1001;
+    while(cin >> x){
+        f[x] ++;
+        if(x < min1){
+            min2 = min1;
+            min1 = x;
+        } 
+    }
+    int r = min2 - min1;
+    min1 = min2;
+    for(int i = min2 + 1; i <= 1000; i ++){
+        if(f[i] != 0) {
+            min2 = i;
+            if(min2- min1 != r){
+                cout << "NU";
+                return 0;
+            }
+        }
+    }
+     
+    return 0;
+}
