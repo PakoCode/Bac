@@ -1,0 +1,125 @@
+S1
+
+1.b
+y z x
+
+2. 
+
+a) 55533
+b) 722, 712,  702, 1702
+c) cat timp n > 0 executa
+
+
+S2
+
+1.a)
+2.d)
+3.
+if(x == 0)  cout << "impartire nepermisa"; return 0;
+rezultat.cat = 2018 / x;
+rezultat.rest= 2018 - x * rezultat.cat
+
+4. 5, 4, 3, 
+
+5.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a[5], b[100][100], n;
+    cin >> n;
+    for(int i = 1; i <= n; i ++){
+        cin >> a[i];
+    }
+    for(int j = 2; j <= n; j += 2){
+        for(int i = 1; i <= n; i ++){
+            b[i][j] = a[i];
+        }
+    }
+     for(int j = 1; j <= n; j += 2){
+        for(int i = 1; i <= n; i ++){
+            b[i][j] = a[n - i + 1];
+        }
+    }
+    
+    for(int i = 1; i <= n; i ++){
+        for(int j = 1; j <= n; j ++){
+            cout << b[i][j] << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+
+S3
+
+1.c;
+
+f(7) = 1 f(4)
+f(4) = 0 f(1)
+f(1) = 1
+
+2.
+
+stilou pana toc creion pensula
+1 	 2    3   4      5
+
+3 4 1 2 5
+3 4 1 5 2
+3 4 2 1 5
+3 4 2 5 1
+3 4 5 1 2
+3 4 5 2 1
+3 5 4 1 2
+
+
+3.
+
+bool prim(int n){
+    if(n == 0 || n == 1) return 0;
+    if(n == 2) return 1;
+    if(n % 2 == 0) return 0;
+    int d = 3;
+    for(d = 3; d <= n / 2; d ++){
+        if(n % d == 0) return 0;
+    }
+    return 1;
+}
+int interval(int n){
+    int ok = 0, x = n + 1;
+    if(prim (n) == 1) ok ++;
+    while(ok <= 1){
+        x ++;
+        if(prim(x) == 1) ok ++;
+    }
+    return x - 1;
+}
+
+
+4.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int x, y, z;
+    cin >> x >> y;
+    cout << y << " " << x << " ";
+    while(x >= 0){
+        cout << x << " ";
+        z = -1*(y - 2 * x - 2);
+        y = x;
+        x = z;
+    }
+    
+    return 0;
+}
+
+
+
+
+
+
+
