@@ -1,0 +1,130 @@
+S1
+
+1.d
+
+
+2.
+a) 2
+b) 4 2 12 20 36 44
+c) pentru i <- 1, n  executa
+
+S2
+
+1.d
+2.c
+3.
+
+if(d.nr == d.mic) cout << "prim";
+else if(d.mic * d.mic == d.nr ){
+	verif if prim?;
+}
+else cout << d.mic << " " << d.nr / d.mic;
+
+
+4.
+a[i][j] = min(i,j);
+
+
+5.
+#include <iostream>
+#include <string.h>
+using namespace std;
+
+int main() {
+    char s[101] = {}, *p, aux[101] = {};
+    int nr = 0;
+    cin.getline(s, 101);
+    p = strtok(s, " ");
+    while(p != NULL){
+        int c = 0;
+        if(strchr("0123456789", p[0])){
+            c = p[0] - '0';
+            if(c > nr){
+                nr = c;
+                strcpy(aux, p);
+            }
+        }
+        p = strtok(NULL, " ");
+    }
+    cout << aux;
+    return 0;
+}
+
+
+
+S3
+
+
+1.b;
+
+2.
+
+
+fondante caramele dropsuri acadele
+1		2	 3		4
+
+
+3 =! 4
+
+12
+123
+124
+13
+14
+23
+
+
+3.
+
+#include <iostream>
+#include <string.h>
+using namespace std;
+int echilibrat(int n){
+    int k = 0, s1 = 0, s2 = 0;
+    while(n != 0){
+        if(k % 2 == 0) s1 = s1 + n % 10;
+        else s2 = s2 + n % 10;
+        n = n / 10;
+        k ++;
+    }
+    if(s1 % 2 == 0 && s2 % 2 != 0) return 1;
+    return 0;
+}
+int main() {
+    int n;
+    cin >> n;
+    cout << echilibrat(n);
+    return 0;
+}
+
+
+4. (not good solution)
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+    int f[10][4] = {}, x, lungmax = - 1, lung = 1;
+    while(cin >> x){
+        f[x][1] ++;
+        if(f[x][1] == 1){
+            f[x][3] = lung;
+        }
+        else if(f[x][1] > 1){
+            f[x][2] = lung - f[x][3];
+            f[x][3] = lung;
+        }
+        lung ++;
+    }
+    for(int i = 0; i <= 9; i ++){
+        if(f[x][2] > lungmax ) lungmax = f[x][2];
+    }
+    cout << lungmax << endl;
+     for(int i = 0; i <= 9; i ++){
+        if(f[x][2] == lungmax) cout << f[x][2] << " ";
+    }
+    return 0;
+}
+
+
+
+
